@@ -26,10 +26,35 @@ main {
 
 nav {
   padding-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+ul {
+  list-style: none;
 }
 
 nav img {
   height: 28px;
+}
+
+.nav-list {
+  align-self: flex-end;
+  width: 70%;
+  background-color: white;
+  height: 100vh;
+  top: 50px;
+  padding: 4rem 1rem;
+  position: absolute;
+}
+
+.nav-list ul {
+  display: grid;
+  gap: 1.5rem;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 img {
