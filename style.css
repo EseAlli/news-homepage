@@ -63,8 +63,6 @@ nav img {
   right: -1px;
   display: none;
   flex-direction: column;
-  background: hsla(240, 100%, 5%, 0.5);
-  mix-blend-mode: normal;
   left: 0;
 }
 
@@ -103,6 +101,8 @@ nav img {
 
 .show-menu .nav-list {
   display: flex;
+  background: hsla(240, 100%, 5%, 0.5);
+  mix-blend-mode: normal;
 }
 
 .show-menu .menu-btn::after {
@@ -262,6 +262,8 @@ header a:hover {
 
   nav {
     grid-area: nav;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .menu-btn {
@@ -271,7 +273,6 @@ header a:hover {
   .nav-list {
     position: static;
     height: auto;
-    padding: 0;
     width: auto;
     display: flex;
   }
@@ -281,6 +282,12 @@ header a:hover {
     gap: 40px;
     font-size: 15px;
     line-height: 26px;
+    padding: 0;
+    width: auto;
+  }
+
+  .nav-list .menu-btn {
+    display: none;
   }
 
   header {
