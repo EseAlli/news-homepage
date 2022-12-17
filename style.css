@@ -98,6 +98,7 @@ nav img {
 
 .navbar span::after {
   content: url(./assets/images/icon-menu.svg);
+  transition: 0.2s all ease;
 }
 
 header {
@@ -115,6 +116,7 @@ header {
 header section {
   margin: 1.5rem 0;
   display: flex;
+  flex-direction: column;
 }
 
 header h1 {
@@ -253,6 +255,7 @@ header a:hover {
     height: auto;
     padding: 0;
     width: auto;
+    display: flex;
   }
 
   .nav-list ul {
