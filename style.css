@@ -39,6 +39,16 @@ ul {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 nav img {
   height: 28px;
 }
@@ -48,22 +58,37 @@ nav img {
   width: 70%;
   background-color: white;
   height: 100vh;
-  top: 50px;
+  top: 80px;
   padding: 4rem 1rem;
   position: absolute;
+  right: -1px;
+  display: none;
 }
 
 .nav-list ul {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+.nav-list li {
+  color: var(--dark-grayish-blue);
+}
+
+.nav-list li:hover {
+  color: var(--primary-red);
+  transition: 0.5s all ease-in;
+}
+
+.show-menu .nav-list {
+  display: flex;
+}
+
+.show-menu .navbar span::after {
+  content: url(./assets/images/icon-menu-close.svg);
 }
 
 .navbar {
@@ -89,7 +114,7 @@ header {
 
 header section {
   margin: 1.5rem 0;
-  display: grid;
+  display: flex;
 }
 
 header h1 {
@@ -108,7 +133,6 @@ header p {
 }
 
 header a {
-  text-decoration: none;
   text-transform: uppercase;
   color: var(--off-white);
   background-color: var(--primary-red);
@@ -117,6 +141,11 @@ header a {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 4.375px;
+}
+
+header a:hover {
+  background-color: var(--dark-blue);
+  transition: 0.5s all ease-in;
 }
 
 .new {
@@ -138,6 +167,11 @@ header a {
 
 .new h3 {
   color: var(--off-white);
+}
+
+.new h3:hover {
+  color: var(--primary-orange);
+  transition: 0.5s all ease;
 }
 
 .new p {
@@ -186,6 +220,11 @@ header a {
   margin: 12px 0 9px 0;
 }
 
+.top h4:hover {
+  color: var(--primary-red);
+  transition: 0.5s all ease-in;
+}
+
 .top p {
   font-weight: 400;
   font-size: 15px;
@@ -205,9 +244,31 @@ header a {
     grid-area: nav;
   }
 
+  .menu-btn {
+    display: none;
+  }
+
+  .nav-list {
+    position: static;
+    height: auto;
+    padding: 0;
+    width: auto;
+  }
+
+  .nav-list ul {
+    flex-direction: row;
+    gap: 40px;
+    font-size: 15px;
+    line-height: 26px;
+  }
+
   header {
     grid-area: header;
     padding: 0;
+  }
+
+  header section {
+    margin-bottom: 0;
   }
 
   .new {
@@ -229,6 +290,11 @@ header a {
 @media (min-width: 1280px) {
   main {
     grid-template-columns: 1fr 350px;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   header section {
