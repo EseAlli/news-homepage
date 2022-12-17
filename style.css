@@ -26,13 +26,14 @@ main {
   width: 90%;
   margin: 0 auto;
   max-width: 1110px;
+  position: inherit;
 }
 
 nav {
   padding-top: 1.25rem;
   display: flex;
   flex-direction: column;
-  position: relative;
+  /* position: relative; */
 }
 
 ul {
@@ -55,14 +56,16 @@ nav img {
 
 .nav-list {
   align-self: flex-end;
-  width: 70%;
-  background-color: white;
+  width: 100%;
   height: 100vh;
-  top: 80px;
-  padding: 4rem 1rem;
+  top: 0px;
   position: absolute;
   right: -1px;
   display: none;
+  flex-direction: column;
+  background: hsla(240, 100%, 5%, 0.5);
+  mix-blend-mode: normal;
+  left: 0;
 }
 
 .nav-list ul {
@@ -72,6 +75,11 @@ nav img {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
+  background-color: white;
+  padding: 4rem 1rem;
+  align-self: flex-end;
+  width: 70%;
+  height: 100%;
 }
 
 .nav-list li {
@@ -83,11 +91,21 @@ nav img {
   transition: 0.5s all ease-in;
 }
 
+.nav-list .menu-btn {
+  align-self: flex-end;
+  background-color: white;
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.5rem 0.5rem 0 0;
+  margin-bottom: -1px;
+}
+
 .show-menu .nav-list {
   display: flex;
 }
 
-.show-menu .navbar span::after {
+.show-menu .menu-btn::after {
   content: url(./assets/images/icon-menu-close.svg);
 }
 
@@ -96,7 +114,7 @@ nav img {
   justify-content: space-between;
 }
 
-.navbar span::after {
+.menu-btn::after {
   content: url(./assets/images/icon-menu.svg);
   transition: 0.2s all ease;
 }
