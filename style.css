@@ -32,6 +32,11 @@ nav img {
   height: 28px;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -42,16 +47,15 @@ nav img {
 }
 
 header {
-  margin: 2.5rem 0;
+  padding: 2.5rem 0 0.125rem 0;
 }
 
-header picture {
-  display: flex;
-}
-
-header img {
-  max-width: 100%;
-  display: block;
+.hero {
+  background-image: url(./assets/images/image-web-3-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+  block-size: 300px;
 }
 
 header section {
@@ -89,6 +93,7 @@ header a {
 .new {
   background-color: var(--dark-blue);
   padding: 1.5rem;
+  margin: 4rem 0;
 }
 
 .new h2 {
@@ -111,4 +116,50 @@ header a {
   font-size: 15px;
   line-height: 26px;
   color: var(--grayish-blue);
+}
+
+.new hr {
+  border: none;
+  height: 0.125px;
+  background-color: var(--dark-grayish-blue);
+}
+
+.top {
+  display: grid;
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+.top article {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.top img {
+  width: 100px;
+}
+
+.top div {
+  display: grid;
+}
+
+.top h3 {
+  color: var(--grayish-blue);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.top h4 {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 12px 0 9px 0;
+}
+
+.top p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  color: var(--dark-grayish-blue);
 }
