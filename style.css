@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+:root {
+  --primary-orange: hsl(35, 77%, 62%);
+  --primary-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --dark-blue: hsl(240, 100%, 5%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  padding: 0 1rem;
+}
+
+nav {
+  padding-top: 1.25rem;
+}
+
+nav img {
+  height: 28px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar span::after {
+  content: url(./assets/images/icon-menu.svg);
+}
+
+header {
+  margin: 2.5rem 0;
+}
+
+header picture {
+  display: flex;
+}
+
+header img {
+  max-width: 100%;
+  display: block;
+}
+
+header section {
+  margin: 1.5rem 0;
+  display: grid;
+}
+
+header h1 {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+header p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  color: var(--dark-grayish-blue);
+  margin: 1rem 0 1.5rem 0;
+}
+
+header a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--off-white);
+  background-color: var(--primary-red);
+  padding: 1rem 2rem;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 4.375px;
+}
+
+.new {
+  background-color: var(--dark-blue);
+  padding: 1.5rem;
+}
+
+.new h2 {
+  color: var(--primary-orange);
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.new article {
+  margin: 1.85rem 0;
+}
+
+.new h3 {
+  color: var(--off-white);
+}
+
+.new p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  color: var(--grayish-blue);
+}
